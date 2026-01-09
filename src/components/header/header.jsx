@@ -6,7 +6,6 @@ import LoginButton from "../buttons/loginButton";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAppSettings, logoutUser } from "@/store/slice/authSlice";
 import { fetchHome, clearHeadSearchResult, fetchGlobalSearch } from "@/store/slice/homeSlice";
-// import Login from "@/components/modals/login";
 import { fetchAllCourse } from "@/store/slice/courseSlice";
 import { usePathname, useRouter } from "next/navigation";
 import { FaBars } from "react-icons/fa6";
