@@ -17,7 +17,7 @@ import { CiUser, CiLogout } from "react-icons/ci";
 import Logout from "@/components/modals/logout";
 import { CiSearch } from "react-icons/ci";
 import { VscLinkExternal } from "react-icons/vsc";
-import Login from "../modals/login";
+import Login from "@/components/modals/login";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
