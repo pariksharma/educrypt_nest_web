@@ -1,0 +1,375 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-color: #973c00;
+  --theme-secondary: #fccdad;
+  --color-secondary: #fccdad;
+  --toolbar-color: #10B981;
+  --statusbar-color: #eee;
+  --font-primary: 14px;
+  --font-secondary: 12px;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Reddit Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Reddit+Sans:wght@300;400;500;600;700;800;900&display=swap%27');
+    font-display: swap;
+  }
+}
+ 
+*{
+  font-family: "Reddit Sans", ui-sans-serif, system-ui, sans-serif;
+}
+ 
+.font-reddit {
+  font-family: "Reddit Sans", ui-sans-serif, system-ui, sans-serif;
+}
+ 
+input::placeholder, textarea::placeholder{
+  font-size: 12px;
+}
+
+input:focus-visible, input:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+textarea:focus-visible, textarea:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}
+ 
+.bg-primary{
+  background: var(--primary-color);
+}
+
+.bg-primary-light{
+  background: color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+ 
+.text-primary{
+  color: var(--primary-color);
+}
+
+.activeTab{
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+ 
+.hover-bg-primary:hover{
+  background: var(--primary-color);
+}
+ 
+.hover-bg-white:hover{
+  background: #fff;
+}
+ 
+.border-primary{
+  border-color: var(--primary-color);
+}
+ 
+.bg-secondary{
+  background: var(--primary-color);
+}
+ 
+.text-primary{
+  color: var(--primary-color);
+}
+ 
+.hover-text-primary:hover{
+  color: var(--primary-color);
+}
+ 
+.hover-text-white:hover{
+  color: #fff;
+}
+ 
+.text-secondary{
+  color: var(--color-secondary);
+}
+ 
+.font-primary{
+  font-size: var(--font-primary);
+}
+ 
+.font-secondary{
+  font-size: var(--font-secondary);
+}
+ 
+.swiper-button-prev, .swiper-button-next{
+  height: 30px !important;
+  width: 30px !important;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.swiper-button-prev svg, .swiper-button-next svg{
+  color: #fff;
+  height: 14px !important;
+  width: 14px !important;
+}
+ 
+.swiper-button-prev{
+  left: 1px !important;
+}
+ 
+.swiper-button-next{
+  right: 1px !important;
+}
+ 
+.tranding_course_explore:hover{
+  padding: 5px;
+  box-shadow: 0 0 3px #cdcccc;
+}
+ 
+.tranding_course_explore:hover img{
+  height: 81px;
+}
+ 
+.tranding_course_explore:hover .trending_explore_btn{
+  display: flex;
+}
+ 
+.thin-scrollbar{
+  scrollbar-width: thin;
+}
+ 
+.thin-scrollbar::-webkit-scrollbar{
+  scrollbar-width: thin;
+}
+ 
+.no-scrollbar{
+  scrollbar-width: none;
+}
+ 
+.no-scrollbar::-webkit-scrollbar{
+  scrollbar-width: none;
+}
+
+.otpContainer input {
+    width: 30px !important;
+    height: 25px;
+    border: none;
+    border: 1px solid #cbc9c9;
+    margin-left: 0;
+    font-size: 13px;
+    padding: 0px !important;
+    outline: none;
+    color: grey;
+}
+
+.loader_main_wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.loader_main_wraper .spinner-dot-border {
+    height: 15px;
+    width: 60px;
+    display: flex;
+    position: relative;
+}
+
+.loader_main_wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.loader_main_wraper .loader_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.loader_main_wraper .spinner-dot-border {
+    height: 15px;
+    width: 60px;
+    display: flex;
+    position: relative;
+}
+
+.loader_main_wraper .dotCircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #565555;
+    animation: moveLoader 500ms linear infinite;
+    margin-right: 15px;
+}
+
+.loader_main_wraper .dotCircle:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: grow 500ms linear infinite;
+}
+
+.loader_main_wraper .dotCircle:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+    animation: grow 500ms linear infinite reverse;
+}
+
+/* HTML: <div class="loader"></div> */
+.btn-loader {
+  width: 20px;
+  padding: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+.btnbg:hover .btn-loader {
+  background: var(--primary-color) !important;
+}
+
+
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+@keyframes grow {
+    from {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLoader {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(25px);
+    }
+}
+
+ 
+.swiper_nav_cutom_btn{
+  height: 25px !important;
+  width: 25px !important;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+ 
+.swiper_nav_cutom_btn svg{
+  color: #fff;
+  height: 12px !important;
+  width: 12px !important;
+}
+ 
+.thin-scrollbar{
+  scrollbar-width: thin;
+}
+ 
+.thin-scrollbar::-webkit-scrollbar{
+  scrollbar-width: thin;
+}
+ 
+.no-scrollbar{
+  scrollbar-width: none;
+}
+ 
+.no-scrollbar::-webkit-scrollbar{
+  scrollbar-width: none;
+}
+ 
+.testimonials .swiper-slide-next{
+  margin-top: -20px;
+  padding-bottom: 5px;
+}
+
+.testimonials .testimonial_custome_slide3 .swiper-slide-next{
+ margin-top: 0;
+ padding-bottom: 0;
+}
+
+.testimonials .testimonial_custome_slide3 .swiper-slide:nth-child(2){
+  margin-top: -20px;
+  padding-bottom: 5px;
+} 
+
+.player_container .vjs-tech{
+  border-radius: 15px;
+}
+
+.player_container .video-js{
+  border-radius: 15px;
+}
+
+.player_container .rgt_side .tab_list button.active{
+  border-color: var(--primary-color);
+}
+ 
+ 
+ 
+ 
+@media(max-width: 767px){
+  .tranding_course_explore{
+    padding: 5px;
+    box-shadow: 0 0 3px #cdcccc;
+  }
+ 
+  .tranding_course_explore img{
+    height: 120px;
+  }
+ 
+  .tranding_course_explore .trending_explore_btn{
+    display: flex;
+  }
+}
+ 
+ 
+@media(max-width: 420px){
+  .swiper_nav_cutom_btn{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .loader_main_wraper .loader_main {
+      min-height: 50vh !important;
+  }
+}
