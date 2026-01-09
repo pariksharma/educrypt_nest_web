@@ -16,7 +16,7 @@ import { CiUser, CiLogout } from "react-icons/ci";
 import Logout from "@/components/modals/logout";
 import { CiSearch } from "react-icons/ci";
 import { VscLinkExternal } from "react-icons/vsc";
-import Login from "@/components/modals/login.jsx";
+// import Login from "@/components/modals/login.jsx";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -241,7 +241,7 @@ const Header = () => {
             className="bg-white rounded-lg w-full max-w-2xl p-0 opacity-100 max-h-[calc(100vh-100px)] overflow-hidden overflow-y-auto no-scrollbar"
             onClick={(e) => e.stopPropagation()}
           >
-            {<Login closeLoginModal={() => setOpen(false)} open={open} />}
+            {/* {<Login closeLoginModal={() => setOpen(false)} open={open} />} */}
           </div>
         </div>
       )}
