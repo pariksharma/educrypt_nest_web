@@ -6,7 +6,7 @@ import LoginButton from "../buttons/loginButton";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAppSettings, logoutUser } from "@/store/slice/authSlice";
 import { fetchHome, clearHeadSearchResult, fetchGlobalSearch } from "@/store/slice/homeSlice";
-import Login from "@/components/modals/login";
+// import Login from "@/components/modals/login";
 import { fetchAllCourse } from "@/store/slice/courseSlice";
 import { usePathname, useRouter } from "next/navigation";
 import { FaBars } from "react-icons/fa6";
@@ -17,6 +17,7 @@ import { CiUser, CiLogout } from "react-icons/ci";
 import Logout from "@/components/modals/logout";
 import { CiSearch } from "react-icons/ci";
 import { VscLinkExternal } from "react-icons/vsc";
+import Login from "../modals/login";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
